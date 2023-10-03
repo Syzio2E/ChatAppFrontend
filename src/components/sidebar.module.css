@@ -1,0 +1,205 @@
+.sidebar_wrapper{
+    overflow-y: auto;
+  }
+
+  .sidebar {
+    width: 300px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .sidebar p{
+    font-weight: 550;
+  }
+  
+  .sidebar h1 {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+    
+  }
+
+  .search_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .search_results_dropdown {
+    position: relative;
+  }
+  
+  .search_results_dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .search_results_dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .search_results_dropdown li:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .online_users {
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .online_users li {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #e3e3e3;
+    border-radius: 4px;
+  }
+  #room_list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Style for room list items */
+  #room_list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Style for room name */
+  #room_list li span {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  .room_tab {
+    margin-top: 20px;
+  }
+
+  .room_tab button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .room_tab button:hover {
+    background-color: #555;
+  }
+  
+  #search_input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+  
+  #search_button {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #search_button:hover {
+    background-color: #45a049;
+  }
+
+  .room_tab {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  /* Styles for the Groups heading */
+  .room_tab h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for the room list */
+  #room_list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #room_list li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .list_group{
+    cursor: pointer;
+  
+  }
+  
+  .list_group:hover{
+   background-color: grey;
+   color: white;
+   border-radius: 8px;
+   font-size: 500;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  
+  /* Style the scrollbar track (background) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+  }
+  
+  /* Style the scrollbar thumb (handle) */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Background color of the thumb */
+    border-radius: 3px; /* Rounded corners for the thumb */
+  }
+  
+  /* Style the scrollbar thumb on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change the background color on hover */
+
+    
+  }
+  
+  /* Style the scrollbar thumb when clicked */
+  ::-webkit-scrollbar-thumb:active {
+    background: #333; /* Change the background color when clicked */
+  }
+
+ 
+
+
+
+  *{
+    margin: 0;
+    padding: 0;
+}
+
+
+
