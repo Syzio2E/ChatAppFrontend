@@ -37,7 +37,7 @@ const Modal = ({ closemodalHandler }) => {
     const token = localStorage.getItem("token");
     if (search) {
       const response = await axios.get(
-        `http://3.109.133.91:8000/home?search=${search}`,
+        `https://3.109.133.91:8000/home?search=${search}`,
         { headers: { Authorization: token } }
       );
       if (response.status === 200) {

@@ -27,7 +27,7 @@ const Sidebar = () => {
       const getOnlineUsers = () => {
         const token = localStorage.getItem("token");
         axios
-          .get("http://3.109.133.91:8000/users", {
+          .get("https://3.109.133.91:8000/users", {
             headers: { Authorization: token },
           })
           .then((response) => {
@@ -46,7 +46,7 @@ const Sidebar = () => {
       const gettalkedtoUsers = () => {
         const token = localStorage.getItem("token");
         axios
-          .get("http://3.109.133.91:8000/userchat", {
+          .get("https://3.109.133.91:8000/userchat", {
             headers: { Authorization: token },
           })
           .then((response) => {
@@ -89,7 +89,7 @@ const Sidebar = () => {
     const token = localStorage.getItem("token");
     if (searchUser) {
       const response = await axios.get(
-        `http://3.109.133.91:8000/home?search=${searchUser}`,
+        `https://3.109.133.91:8000/home?search=${searchUser}`,
         { headers: { Authorization: token } }
       );
       if (response.status === 200) {
