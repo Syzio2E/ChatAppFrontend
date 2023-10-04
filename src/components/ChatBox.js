@@ -13,7 +13,7 @@ import SettingModal from "./SettingModal";
 import { userActions } from "../store/user-redux";
 import io from "socket.io-client";
 
-const ENDPOINT = "https://3.109.133.91:8000";
+const ENDPOINT = "http://3.109.133.91:8000";
 export var socket = io(ENDPOINT);
 
 const ChatBox = () => {

@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 export const addUsers = (obj) => {
   return async (dispatch) => {
     try {
-      const response = await axios.post("https://3.109.133.91:8000/login", obj,{headers:{'Content-Type':'application/json'}});
+      const response = await axios.post("http://3.109.133.91:8000/login", obj,{headers:{'Content-Type':'application/json'}});
       if (response.status === 200) {
         const token = response.data.token;
         localStorage.setItem("token", token);
@@ -50,7 +50,7 @@ export const addUsers = (obj) => {
 export const newUser = (obj) => {
   return async (dispatch) => {
     try {
-      const response = await axios.post("https://3.109.133.91:8000", obj,{headers:{'Content-Type':'application/json'}});
+      const response = await axios.post("http://3.109.133.91:8000", obj,{headers:{'Content-Type':'application/json'}});
       if (response.status === 201) {
         const token = response.data.token;
         localStorage.setItem("token", token);
@@ -91,7 +91,7 @@ export const newUser = (obj) => {
 export const onUserLogout = (token) => {
   return async (dispatch) => {
     try{
-         await axios.put('https://3.109.133.91:8000/logout',null,{headers:{Authorization:token}})
+         await axios.put('http://3.109.133.91:8000/logout',null,{headers:{Authorization:token}})
         dispatch(userActions.logout())
     }catch(err){
         const errorMessage =
