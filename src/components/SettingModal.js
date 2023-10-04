@@ -22,7 +22,7 @@ const SettingModal = ({ closemodalHandler }) => {
     const getParticipants = async () => {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:8000/home/groupusers/${groupId}`,
+        `http://3.109.133.91:8000/home/groupusers/${groupId}`,
         { headers: { Authorization: token } }
       );
       const users = response.data.participants;
@@ -56,7 +56,7 @@ const SettingModal = ({ closemodalHandler }) => {
     const token = localStorage.getItem("token");
     if (search) {
       const response = await axios.get(
-        `http://localhost:8000/home?search=${search}`,
+        `http://3.109.133.91:8000/home?search=${search}`,
         { headers: { Authorization: token } }
       );
       if (response.status === 200) {
@@ -70,7 +70,7 @@ const SettingModal = ({ closemodalHandler }) => {
     if (groupname) {
       try {
         const response = await axios.put(
-          `http://localhost:8000/home/groupname/${groupId}`,
+          `http://3.109.133.91:8000/home/groupname/${groupId}`,
           { name: groupname },
           { headers: { Authorization: token } }
         );
@@ -120,7 +120,7 @@ const SettingModal = ({ closemodalHandler }) => {
   const deleteUserHandle = async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8000/home/groupchat/${groupId}/${id}`,
+        `http://3.109.133.91:8000/home/groupchat/${groupId}/${id}`,
         { headers: { Authorization: token } }
       );
       if (response.status === 200) {

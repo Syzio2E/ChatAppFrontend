@@ -6,7 +6,7 @@ import { userActions } from "./user-redux";
 export const getSelectedUserMessage=(id,token)=>{
     return async(dispatch)=>{
         try {
-            const response = await axios.get(`http://localhost:8000/home/${id}`,{headers:{Authorization:token}})
+            const response = await axios.get(`http://3.109.133.91:8000/home/${id}`,{headers:{Authorization:token}})
             const messages = response.data.chats;
             dispatch(chatActions.getmessages(messages))
             
@@ -20,7 +20,7 @@ export const createGroups = (obj, token) => {
     return async (dispatch) => {
       try {
         const response = await axios.post(
-          'http://localhost:8000/home/creategroup',
+          'http://3.109.133.91:8000/home/creategroup',
           obj,
           { headers: { Authorization: token } }
         );
@@ -39,7 +39,7 @@ export const createGroups = (obj, token) => {
   export const fetchUserGroups = (token) => {
     return async (dispatch) => {
       try {
-        const response = await axios.get('http://localhost:8000/home/getgroup', {
+        const response = await axios.get('http://3.109.133.91:8000/home/getgroup', {
           headers: { Authorization: token },
         });
         
@@ -64,7 +64,7 @@ export const createGroups = (obj, token) => {
           return;
         }
         const response = await axios.post(
-          `http://localhost:8000/home/groupmessage/${groupId}`,
+          `http://3.109.133.91:8000/home/groupmessage/${groupId}`,
           obj,
           { headers: { Authorization: token } }
         );
@@ -83,7 +83,7 @@ export const createGroups = (obj, token) => {
 export const userSingleChat=(id,token,obj)=>{
     return async(dispatch)=>{
         try {
-            const response = await axios.post(`http://localhost:8000/home/${id}`,obj,{headers:{Authorization:token}})
+            const response = await axios.post(`http://3.109.133.91:8000/home/${id}`,obj,{headers:{Authorization:token}})
             if(response.status===200){
                 dispatch(chatActions.getmessages(response.data.chatMessage))
                 return response.data.chatMessage
@@ -100,7 +100,7 @@ export const userSingleChat=(id,token,obj)=>{
 export const getGroupMessages = (groupId, token) => {
   return async (dispatch) => {
     try {
-      const response = await axios.get(`http://localhost:8000/home/groupchatmessages/${groupId}`, {
+      const response = await axios.get(`http://3.109.133.91:8000/home/groupchatmessages/${groupId}`, {
         headers: { Authorization: token },
       });
       if (response.status === 200) {
